@@ -1,0 +1,16 @@
+name: Hello World
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: チェックアウト
+        uses: actions/checkout@v3
+
+      - name: メッセージを表示
+        run: echo "GitHub Actionsが動いた"
